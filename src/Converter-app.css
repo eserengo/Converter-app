@@ -1,0 +1,154 @@
+:root {
+  /* --- FONTS --- */
+  font-family: "Archivo Black";
+  font-size: 18px;
+  font-weight: 400;
+
+  /* COLOR PALETTE --- */
+  --white: hsl(0, 0%, 100%);
+  --white-op: rgb(255, 255, 255, 0.5);
+  --purple: rgb(35, 0, 35);
+  --indigo: hsl(275, 69%, 62%);
+  --magenta: hsl(350, 100%, 81%);
+  --magenta-op: rgb(255, 158, 174, 0.5);
+  --cyan: hsl(180, 100%, 77%);
+  --cyan-op: rgba(138, 255, 255, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  user-select: none;
+}
+
+body {
+  background-color: var(--indigo);
+  color: var(--purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.error {
+  color: var(--magenta) !important;
+  font-size: 0.75rem !important;
+}
+
+.invalid {
+  border: 1px solid var(--magenta) !important;
+}
+
+.card {
+  background-color: var(--white);
+  box-shadow: 0px 3px 6px var(--white-op);
+  min-width: 16rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  flex: 1 1 100%;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--indigo);
+  border-radius: 0.5rem;
+}
+
+.wrapper {
+  margin: 0rem;
+}
+
+.form {
+  margin: 0rem;
+  width: 100%;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+.input,
+.select {
+  outline: none;
+  text-align: right;
+  font-family: "Archivo Black";
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--purple);
+  width: 11.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--indigo);
+  border-radius: 0.5rem;
+}
+
+.button {
+  display: block;
+  margin: 1rem 0rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.primary {
+  background-color: var(--cyan-op);
+  border: 1px solid var(--cyan);
+  color: var(--purple);
+  width: 11.5rem;
+  height: 2.5rem;
+}
+
+.primary:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: var(--cyan);
+  box-shadow: 0px 3px 6px var(--cyan-op);
+}
+
+.secondary {
+  background-color: var(--white);
+  border: 1px solid var(--magenta);
+  color: var(--purple);
+  width: 8.5rem;
+  height: 2.5rem;
+}
+
+.secondary:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  background-color: var(--magenta);
+  box-shadow: 0px 3px 6px var(--magenta-op);
+}
+
+.aside {
+  background-color: var(--cyan-op);
+  box-shadow: 0px 3px 6px var(--cyan-op);
+  margin: 1rem 0rem;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--cyan);
+  border-radius: 0.5rem;
+}
+
+.attribution {
+  font-size: 0.5rem;
+  font-weight: var(--light);
+}
+
+.attribution > a {
+  color: var(--purple);
+}
+
+@media screen and (width > 400px) {
+  .card {
+    flex-flow: row nowrap;
+    min-width: 32rem;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:;base64,iVBORw0KGgo=">
+  <title>Converter-app</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./src/Converter-app.css" media="all">
+  <script type="module" src="./src/data.js"></script>
+  <script type="module" src="./src/Converter.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo Black:wght@400;600&display=swap">
+  <meta name="description" content="Author: Federico Borzani, Converter-app">
+</head>
+
+<body>
+  <header>
+    <h1>Conveter app</h1>
+  </header>
+  <main class="card">
+    <form action="#" class="form" id="form-action" novalidate>
+      <span class="wrapper">
+        <label for="select" class="label">From:</label>
+        <select id="select" name="measures" class="select" form="form-action" required>
+          <option disabled selected value> -- select an option -- </option>
+        </select>
+      </span><br>
+      <span class="wrapper">
+        <label for="input" class="label">Enter a number:</label>
+        <input type="number" id="input" class="input" placeholder="0" autocomplete="off" required />
+        <span id="prefix"></span>
+      </span><br>
+      <span class="wrapper">
+        <input type="submit" id="submit" class="button primary" value="convert" />
+        <input type="reset" id="reset" class="button secondary" value="reset" />
+      </span><br>
+    </form>
+    <aside class="aside">
+      <p id="output"></p>
+      <span id="result">0</span>
+      <span id="sufix"></span>
+    </aside>
+  </main>
+  <footer>
+    <p class="attribution">Coded by <a href="https://github.com/eserengo/" target="_blank">Federico Borzani</a>.</p>
+  </footer>
+</body>
+</html>
